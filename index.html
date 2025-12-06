@@ -1028,7 +1028,6 @@
             margin: 1.5rem 0;
             min-height: 250px;
             min-width: 250px;
-            position: relative;
         }
 
         .qrcode-container canvas {
@@ -1043,30 +1042,6 @@
             justify-content: center;
             margin-top: 1.5rem;
             flex-wrap: wrap;
-        }
-
-        /* 加载状态 */
-        .loading-spinner {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            border: 3px solid var(--border-color);
-            border-top: 3px solid var(--primary-color);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        .loading-spinner.active {
-            display: block;
-        }
-
-        @keyframes spin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         /* 响应式设计 */
@@ -1365,15 +1340,15 @@
                     <div class="obsidian-carousel">
                         <div class="carousel-slides">
                             <div class="slide">
-                                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Obsidian知识库首页" class="obsidian-img">
+                                <img src="images/ob展示2.png" alt="Obsidian知识库首页" class="obsidian-img" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                                 <div class="slide-caption">Obsidian知识库首页 - 结构化笔记管理</div>
                             </div>
                             <div class="slide">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Obsidian知识图谱" class="obsidian-img">
+                                <img src="images/ob展示3.png" alt="Obsidian知识图谱" class="obsidian-img" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                                 <div class="slide-caption">知识图谱视图 - 跨学科链接展示</div>
                             </div>
                             <div class="slide">
-                                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Obsidian主题样式" class="obsidian-img">
+                                <img src="images/ob展示1.png" alt="Obsidian主题样式" class="obsidian-img" onerror="this.src='https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                                 <div class="slide-caption">主题样式 - 个性化知识管理界面</div>
                             </div>
                         </div>
@@ -1563,7 +1538,6 @@
                 扫描二维码访问我的个人简历网站
             </p>
             <div class="qrcode-container">
-                <div class="loading-spinner"></div>
                 <div id="qrcode"></div>
             </div>
             <div class="qr-buttons">
@@ -1595,11 +1569,6 @@
     <button class="back-to-top" aria-label="返回顶部">↑</button>
 
     <script>
-        // 解决二维码问题的关键步骤：
-        // 1. 确保QRCode库完全加载后再执行相关代码
-        // 2. 添加错误处理和回退方案
-        // 3. 优化用户体验
-
         // 简历数据
         const resume = {
             personal: {
@@ -1719,7 +1688,7 @@
                     date: "2027年10月2日",
                     type: "advanced",
                     description: "基于百炼平台构建智能体应用，掌握大模型应用开发能力",
-                    imageUrl: "https://via.placeholder.com/400x300/4361ee/ffffff?text=阿里云认证"
+                    imageUrl: "images/1.jpg"
                 },
                 {
                     id: 2,
@@ -1728,7 +1697,7 @@
                     date: "2027年10月2日",
                     type: "advanced",
                     description: "RAG应用构建及优化，掌握检索增强生成技术",
-                    imageUrl: "https://via.placeholder.com/400x300/7209b7/ffffff?text=RAG认证"
+                    imageUrl: "images/2.jpg"
                 },
                 {
                     id: 3,
@@ -1737,7 +1706,7 @@
                     date: "2026年10月1日",
                     type: "premium",
                     description: "人工智能训练师高级认证，掌握AI模型训练与优化",
-                    imageUrl: "https://via.placeholder.com/400x300/f72585/ffffff?text=达摩院认证"
+                    imageUrl: "images/3.jpg"
                 },
                 {
                     id: 4,
@@ -1746,7 +1715,7 @@
                     date: "2027年10月3日",
                     type: "design",
                     description: "基于PAIArtLab的AIGC设计基础，掌握AI生成内容设计",
-                    imageUrl: "https://via.placeholder.com/400x300/4cc9f0/ffffff?text=AIGC认证"
+                    imageUrl: "images/4.jpg"
                 },
                 {
                     id: 5,
@@ -1755,7 +1724,7 @@
                     date: "2027年10月2日",
                     type: "content",
                     description: "利用大模型提升内容生产能力，掌握AI内容生成技术",
-                    imageUrl: "https://via.placeholder.com/400x300/f8961e/ffffff?text=内容生产认证"
+                    imageUrl: "images/5.jpg"
                 },
                 {
                     id: 6,
@@ -1764,7 +1733,7 @@
                     date: "2025年10月9日",
                     type: "business",
                     description: "生成式AI商业技能认证，掌握AI在商业场景的应用",
-                    imageUrl: "https://via.placeholder.com/400x300/43aa8b/ffffff?text=AWS认证"
+                    imageUrl: "images/6.jpg"
                 },
                 {
                     id: 7,
@@ -1773,7 +1742,7 @@
                     date: "永久有效",
                     type: "international",
                     description: "人工智能大师班认证，掌握AI在教育、知识管理等领域的应用",
-                    imageUrl: "https://via.placeholder.com/400x300/7209b7/ffffff?text=国际认证"
+                    imageUrl: "images/7.jpg"
                 }
             ]
         };
@@ -1795,255 +1764,8 @@
             qrModal: document.getElementById('qrModal'),
             downloadQRBtn: document.getElementById('downloadQR'),
             shareQRBtn: document.getElementById('shareQR'),
-            qrcodeContainer: document.querySelector('.qrcode-container'),
-            loadingSpinner: document.querySelector('.loading-spinner')
+            qrcodeContainer: document.querySelector('.qrcode-container')
         };
-
-        // 二维码功能变量
-        let qrCodeCanvas = null;
-        let isQRCodeGenerated = false;
-
-        // 检测QRCode库是否加载完成
-        function isQRCodeLoaded() {
-            return typeof QRCode !== 'undefined' && QRCode.toCanvas;
-        }
-
-        // 等待QRCode库加载
-        function waitForQRCodeLibrary(callback, maxAttempts = 10, interval = 200) {
-            let attempts = 0;
-            
-            function checkLibrary() {
-                attempts++;
-                if (isQRCodeLoaded()) {
-                    console.log('QRCode库已加载');
-                    callback();
-                } else if (attempts < maxAttempts) {
-                    console.log(`等待QRCode库加载... (${attempts}/${maxAttempts})`);
-                    setTimeout(checkLibrary, interval);
-                } else {
-                    console.error('QRCode库加载失败，使用备用方案');
-                    createFallbackQRCode();
-                    callback();
-                }
-            }
-            
-            checkLibrary();
-        }
-
-        // 创建备用二维码（当库加载失败时）
-        function createFallbackQRCode() {
-            const qrcodeElement = document.getElementById('qrcode');
-            const websiteUrl = window.location.href;
-            
-            qrcodeElement.innerHTML = `
-                <div style="text-align: center; padding: 20px; width: 200px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <div style="width: 150px; height: 150px; display: grid; grid-template-columns: repeat(8, 1fr); grid-template-rows: repeat(8, 1fr); gap: 2px; background: white; padding: 10px;">
-                        ${Array.from({length: 64}).map((_, i) => 
-                            `<div style="background: ${Math.random() > 0.5 ? '#4361ee' : 'white'};"></div>`
-                        ).join('')}
-                    </div>
-                    <p style="margin-top: 10px; color: #666; font-size: 12px;">手动扫描</p>
-                    <p style="color: #999; font-size: 10px; margin-top: 5px;">或访问:</p>
-                    <p style="color: #4361ee; font-size: 10px; word-break: break-all; max-width: 180px;">${websiteUrl.substring(0, 30)}...</p>
-                </div>
-            `;
-        }
-
-        // 生成二维码
-        function generateQRCode() {
-            const qrcodeElement = document.getElementById('qrcode');
-            
-            if (!qrcodeElement) {
-                console.error('找不到二维码容器元素');
-                return;
-            }
-            
-            // 清除之前的内容
-            qrcodeElement.innerHTML = '';
-            
-            // 显示加载状态
-            if (dom.loadingSpinner) {
-                dom.loadingSpinner.classList.add('active');
-            }
-            
-            // 获取当前网站URL
-            const websiteUrl = window.location.href;
-            
-            // 检查QRCode库是否可用
-            if (!isQRCodeLoaded()) {
-                console.warn('QRCode库未加载，等待加载...');
-                waitForQRCodeLibrary(() => {
-                    generateQRCodeWithLibrary(websiteUrl, qrcodeElement);
-                });
-                return;
-            }
-            
-            generateQRCodeWithLibrary(websiteUrl, qrcodeElement);
-        }
-
-        function generateQRCodeWithLibrary(websiteUrl, qrcodeElement) {
-            try {
-                // 使用 QRCode.js 生成二维码
-                QRCode.toCanvas(qrcodeElement, websiteUrl, {
-                    width: 200,
-                    height: 200,
-                    margin: 1,
-                    color: {
-                        dark: '#4361ee', // 深色部分
-                        light: '#ffffff' // 浅色部分
-                    }
-                }, function(error) {
-                    // 隐藏加载状态
-                    if (dom.loadingSpinner) {
-                        dom.loadingSpinner.classList.remove('active');
-                    }
-                    
-                    if (error) {
-                        console.error('二维码生成错误:', error);
-                        // 如果二维码生成失败，显示备用方案
-                        qrcodeElement.innerHTML = `
-                            <div style="text-align: center; padding: 20px;">
-                                <p style="color: #666; margin-bottom: 10px;">二维码生成失败</p>
-                                <p style="color: #999; font-size: 14px;">请直接访问:</p>
-                                <p style="color: #4361ee; word-break: break-all; font-size: 12px; padding: 10px; background: #f0f2f5; border-radius: 5px;">${websiteUrl}</p>
-                            </div>
-                        `;
-                    } else {
-                        qrCodeCanvas = qrcodeElement.querySelector('canvas');
-                        isQRCodeGenerated = true;
-                        console.log('二维码生成成功');
-                        
-                        // 为canvas添加样式
-                        if (qrCodeCanvas) {
-                            qrCodeCanvas.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-                        }
-                    }
-                });
-            } catch (error) {
-                console.error('二维码生成异常:', error);
-                if (dom.loadingSpinner) {
-                    dom.loadingSpinner.classList.remove('active');
-                }
-                createFallbackQRCode();
-            }
-        }
-
-        // 初始化二维码功能
-        function initQRCode() {
-            if (!dom.qrCodeBtn) {
-                console.warn('找不到二维码按钮');
-                return;
-            }
-            
-            console.log('初始化二维码功能...');
-            
-            // 确保QRCode库已加载
-            waitForQRCodeLibrary(() => {
-                // 首先生成二维码（预生成）
-                generateQRCode();
-                
-                // 二维码按钮点击事件
-                dom.qrCodeBtn.addEventListener('click', () => {
-                    console.log('点击二维码按钮');
-                    
-                    // 显示模态框
-                    dom.qrModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                    
-                    // 如果二维码还未生成，重新生成
-                    if (!isQRCodeGenerated) {
-                        generateQRCode();
-                    }
-                });
-                
-                // 下载二维码功能
-                if (dom.downloadQRBtn) {
-                    dom.downloadQRBtn.addEventListener('click', () => {
-                        if (!qrCodeCanvas) {
-                            alert('二维码还未生成，请稍后再试');
-                            return;
-                        }
-                        
-                        try {
-                            const link = document.createElement('a');
-                            link.download = '郑琦淇-个人简历二维码.png';
-                            link.href = qrCodeCanvas.toDataURL('image/png');
-                            link.click();
-                            console.log('二维码下载成功');
-                        } catch (error) {
-                            console.error('下载二维码失败:', error);
-                            alert('下载失败，请重试或截图保存');
-                        }
-                    });
-                }
-                
-                // 分享链接功能
-                if (dom.shareQRBtn) {
-                    dom.shareQRBtn.addEventListener('click', () => {
-                        const websiteUrl = window.location.href;
-                        
-                        // 使用Web Share API（如果可用）
-                        if (navigator.share) {
-                            navigator.share({
-                                title: '郑琦淇 - 个人简历',
-                                text: '查看郑琦淇的个人简历，了解其在AI认证、知识管理、跨学科整合等方面的专业能力',
-                                url: websiteUrl
-                            }).then(() => {
-                                console.log('分享成功');
-                            }).catch(err => {
-                                console.log('分享取消或失败:', err);
-                                // 回退到复制链接
-                                copyToClipboard(websiteUrl);
-                            });
-                        } else {
-                            // 回退方案：复制到剪贴板
-                            copyToClipboard(websiteUrl);
-                        }
-                    });
-                }
-            });
-            
-            // 关闭模态框
-            const closeBtn = dom.qrModal?.querySelector('.modal-close');
-            if (closeBtn) {
-                closeBtn.addEventListener('click', () => {
-                    dom.qrModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            }
-            
-            // 点击背景关闭
-            if (dom.qrModal) {
-                dom.qrModal.addEventListener('click', (e) => {
-                    if (e.target === dom.qrModal) {
-                        dom.qrModal.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            }
-        }
-
-        // 复制到剪贴板
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('链接已复制到剪贴板！\n\n' + text);
-            }).catch(err => {
-                // 如果clipboard API失败，使用传统方法
-                const textArea = document.createElement('textarea');
-                textArea.value = text;
-                document.body.appendChild(textArea);
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    alert('链接已复制到剪贴板！\n\n' + text);
-                } catch (err) {
-                    alert('无法复制链接，请手动复制：\n\n' + text);
-                }
-                document.body.removeChild(textArea);
-            });
-        }
-
-        // ========== 原有功能保持不变 ==========
 
         // Obsidian轮播功能
         let currentSlide = 0;
@@ -2066,11 +1788,8 @@
             startCarouselInterval();
             
             // 添加按钮事件监听
-            const prevBtn = document.querySelector('.carousel-btn.prev');
-            const nextBtn = document.querySelector('.carousel-btn.next');
-            
-            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            document.querySelector('.carousel-btn.prev').addEventListener('click', prevSlide);
+            document.querySelector('.carousel-btn.next').addEventListener('click', nextSlide);
             
             // 添加指示器事件监听
             indicators.forEach((indicator, index) => {
@@ -2082,15 +1801,17 @@
             if (carouselInterval) clearInterval(carouselInterval);
             carouselInterval = setInterval(() => {
                 nextSlide();
-            }, 5000);
+            }, 5000); // 5秒自动切换
         }
 
         function updateCarousel() {
             const carousel = document.querySelector('.carousel-slides');
             if (!carousel || slides.length === 0) return;
             
+            // 更新位置
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
             
+            // 更新指示器
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
             });
@@ -2099,35 +1820,148 @@
         function nextSlide() {
             currentSlide = (currentSlide + 1) % slides.length;
             updateCarousel();
-            startCarouselInterval();
+            startCarouselInterval(); // 重置计时器
         }
 
         function prevSlide() {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             updateCarousel();
-            startCarouselInterval();
+            startCarouselInterval(); // 重置计时器
         }
 
         function goToSlide(index) {
             if (index >= 0 && index < slides.length) {
                 currentSlide = index;
                 updateCarousel();
-                startCarouselInterval();
+                startCarouselInterval(); // 重置计时器
             }
+        }
+
+        // 二维码功能
+        let qrCodeCanvas = null;
+
+        // 生成二维码
+        function generateQRCode() {
+            const qrcodeElement = document.getElementById('qrcode');
+            
+            // 清除之前的内容
+            qrcodeElement.innerHTML = '';
+            
+            // 获取当前网站URL
+            const websiteUrl = window.location.href;
+            
+            // 使用 QRCode.js 生成二维码
+            QRCode.toCanvas(qrcodeElement, websiteUrl, {
+                width: 200,
+                height: 200,
+                margin: 1,
+                color: {
+                    dark: '#4361ee', // 深色部分
+                    light: '#ffffff' // 浅色部分
+                }
+            }, function(error) {
+                if (error) {
+                    console.error('二维码生成错误:', error);
+                    // 如果二维码生成失败，显示备用方案
+                    qrcodeElement.innerHTML = `
+                        <div style="text-align: center; padding: 20px;">
+                            <p style="color: #666; margin-bottom: 10px;">二维码生成失败</p>
+                            <p style="color: #999; font-size: 14px;">请直接访问:</p>
+                            <p style="color: #4361ee; word-break: break-all; font-size: 12px;">${websiteUrl}</p>
+                        </div>
+                    `;
+                } else {
+                    qrCodeCanvas = qrcodeElement.querySelector('canvas');
+                    console.log('二维码生成成功');
+                }
+            });
+        }
+
+        // 初始化二维码功能
+        function initQRCode() {
+            if (!dom.qrCodeBtn) return;
+            
+            // 首先生成二维码
+            generateQRCode();
+            
+            // 二维码按钮点击事件
+            dom.qrCodeBtn.addEventListener('click', () => {
+                // 重新生成二维码以确保是最新的URL
+                generateQRCode();
+                dom.qrModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // 下载二维码功能
+            dom.downloadQRBtn.addEventListener('click', () => {
+                if (!qrCodeCanvas) {
+                    alert('二维码还未生成，请稍后再试');
+                    return;
+                }
+                
+                try {
+                    const link = document.createElement('a');
+                    link.download = '郑琦淇-个人简历二维码.png';
+                    link.href = qrCodeCanvas.toDataURL('image/png');
+                    link.click();
+                } catch (error) {
+                    console.error('下载二维码失败:', error);
+                    alert('下载失败，请重试');
+                }
+            });
+            
+            // 分享链接功能
+            dom.shareQRBtn.addEventListener('click', () => {
+                const websiteUrl = window.location.href;
+                
+                // 使用Web Share API（如果可用）
+                if (navigator.share) {
+                    navigator.share({
+                        title: '郑琦淇 - 个人简历',
+                        text: '查看郑琦淇的个人简历，了解其在AI认证、知识管理、跨学科整合等方面的专业能力',
+                        url: websiteUrl
+                    }).catch(err => {
+                        console.log('分享取消或失败:', err);
+                    });
+                } else {
+                    // 回退方案：复制到剪贴板
+                    navigator.clipboard.writeText(websiteUrl).then(() => {
+                        alert('链接已复制到剪贴板！\n\n' + websiteUrl);
+                    }).catch(err => {
+                        // 如果clipboard API失败，使用传统方法
+                        const textArea = document.createElement('textarea');
+                        textArea.value = websiteUrl;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        try {
+                            document.execCommand('copy');
+                            alert('链接已复制到剪贴板！\n\n' + websiteUrl);
+                        } catch (err) {
+                            alert('无法复制链接，请手动复制：\n\n' + websiteUrl);
+                        }
+                        document.body.removeChild(textArea);
+                    });
+                }
+            });
+            
+            // 关闭模态框
+            const closeBtn = dom.qrModal.querySelector('.modal-close');
+            closeBtn.addEventListener('click', () => {
+                dom.qrModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // 点击背景关闭
+            dom.qrModal.addEventListener('click', (e) => {
+                if (e.target === dom.qrModal) {
+                    dom.qrModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
         }
 
         // 初始化
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('文档加载完成，开始初始化...');
-            
-            // 设置主题
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.body.classList.add('dark-mode');
-                updateThemeIcon();
-            }
-            
-            // 渲染内容
             renderSkills();
             renderCampus();
             renderProjects();
@@ -2135,11 +1969,14 @@
             initEventListeners();
             animateSkillBars();
             initCarousel();
+            initQRCode();
             
-            // 初始化二维码功能（确保在最后）
-            setTimeout(() => {
-                initQRCode();
-            }, 100);
+            // 设置主题
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+                updateThemeIcon();
+            }
         });
 
         // 渲染技能矩阵
@@ -2260,7 +2097,7 @@
                 card.onclick = () => openCertificateModal(cert.id);
 
                 card.innerHTML = `
-                    <div class="certificate-img" style="background-image: url('${cert.imageUrl}')">
+                    <div class="certificate-img" style="background-image: url('${cert.imageUrl || 'https://via.placeholder.com/400x300?text=证书图片'}')">
                         <div class="certificate-badge" style="background: ${getTypeColor(cert.type)}">
                             ${getTypeIcon(cert.type)} ${cert.type.toUpperCase()}
                         </div>
@@ -2318,7 +2155,7 @@
             const modalDate = document.getElementById('modalDate');
             const modalDesc = document.getElementById('modalDesc');
 
-            modalImg.src = cert.imageUrl;
+            modalImg.src = cert.imageUrl || 'https://via.placeholder.com/800x600?text=证书图片';
             modalTitle.textContent = cert.title;
             modalIssuer.textContent = `颁发机构: ${cert.issuer}`;
             modalDate.textContent = `有效期至: ${cert.date}`;
@@ -2389,6 +2226,7 @@
                     const tabId = btn.dataset.tab;
                     switchTab(tabId);
                     
+                    // 更新按钮状态
                     dom.tabBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
                 });
@@ -2404,6 +2242,7 @@
                         if (target) {
                             target.scrollIntoView({ behavior: 'smooth' });
                             
+                            // 更新导航链接状态
                             dom.navLinks.forEach(l => l.classList.remove('active'));
                             link.classList.add('active');
                         }
@@ -2463,10 +2302,12 @@
         function handleScroll() {
             const scrollY = window.scrollY;
             
+            // 显示/隐藏返回顶部按钮
             if (dom.backToTop) {
                 dom.backToTop.style.display = scrollY > 300 ? 'flex' : 'none';
             }
             
+            // 更新导航栏样式
             if (dom.navbar) {
                 if (scrollY > 50) {
                     dom.navbar.style.boxShadow = 'var(--shadow-md)';
@@ -2475,6 +2316,7 @@
                 }
             }
             
+            // 更新导航链接状态
             const sections = document.querySelectorAll('section[id]');
             let current = '';
             
@@ -2532,4 +2374,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
